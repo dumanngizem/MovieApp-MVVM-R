@@ -1,0 +1,6 @@
+module Pods_DataProvider {
+  umbrella header "Pods-DataProvider-umbrella.h"
+
+  export *
+  module * { export * }
+}

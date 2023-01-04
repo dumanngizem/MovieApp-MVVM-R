@@ -1,0 +1,49 @@
+PODS:
+  - Alamofire (5.6.2)
+  - IQKeyboardManagerSwift (6.5.10)
+  - Kingfisher (6.3.1)
+  - SwiftEntryKit (2.0.0)
+  - SwiftGen (6.5.1)
+  - SwiftLint (0.49.0)
+  - TinyConstraints (4.0.2)
+
+DEPENDENCIES:
+  - Alamofire (~> 5.4)
+  - IQKeyboardManagerSwift
+  - Kingfisher (from `https://github.com/onevcat/Kingfisher`, branch `version6-xcode13`)
+  - SwiftEntryKit (= 2.0.0)
+  - SwiftGen (~> 6.5.1)
+  - SwiftLint (~> 0.43)
+  - TinyConstraints (~> 4.0)
+
+SPEC REPOS:
+  trunk:
+    - Alamofire
+    - IQKeyboardManagerSwift
+    - SwiftEntryKit
+    - SwiftGen
+    - SwiftLint
+    - TinyConstraints
+
+EXTERNAL SOURCES:
+  Kingfisher:
+    :branch: version6-xcode13
+    :git: https://github.com/onevcat/Kingfisher
+
+CHECKOUT OPTIONS:
+  Kingfisher:
+    :commit: d0494dd78f7adf2d3526fdf3267176553020c041
+    :git: https://github.com/onevcat/Kingfisher
+
+SPEC CHECKSUMS:
+  Alamofire: d368e1ff8a298e6dde360e35a3e68e6c610e7204
+  IQKeyboardManagerSwift: 52962c76ab33532f15ad9f3ff4e5715eda5335bb
+  Kingfisher: 8b783c3d7be73a99b2172a743a5bc0a4dd331d79
+  SwiftEntryKit: 61b5fa36f34a97dd8013e48a7345bc4c4720be9a
+  SwiftGen: a6d22010845f08fe18fbdf3a07a8e380fd22e0ea
+  SwiftLint: 414d099c0f305c6c73e56139efb468666e535ece
+  TinyConstraints: 7b7ccc0c485bb3bb47082138ff28bc33cd49897f
+
+PODFILE CHECKSUM: 92cc9988231cd8d311e8e2c60e4583cd2f50fa2d
+
+COCOAPODS: 1.11.3

@@ -1,0 +1,24 @@
+// Generated using SwiftGen — https://github.com/SwiftGen/SwiftGen
+
+{% if catalogs %}
+{% set accessModifier %}{% if param.publicAccess %}public{% else %}internal{% endif %}{% endset %}
+import UIKit
+
+{% macro imagesBlock assets %}
+  {% for asset in assets %}
+
+    static let {{asset.name|swiftIdentifier:"pretty"|lowerFirstWord|escapeReservedKeywords}} = UIColor(named: "{{asset.value}}")!
+  {% endfor %}
+{% endmacro %}
+{{accessModifier}} extension UIColor {
+  {% if catalogs.count > 1 %}
+  {% for catalog in catalogs %}
+  {% call imagesBlock catalog.assets %}
+  {% endfor %}
+  {% else %}
+  {% call imagesBlock catalogs.first.assets %}
+  {% endif %}
+}
+{% else %}
+// No assets found
+{% endif %}
