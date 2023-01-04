@@ -7,6 +7,10 @@ def shared_pods
   pod 'TinyConstraints', '~> 4.0'
   pod 'Kingfisher', :git => 'https://github.com/onevcat/Kingfisher', :branch => 'version6-xcode13'
 
+  #Network Packages
+  pod 'netfox'
+  pod 'OHHTTPStubs/Swift'
+
 end
 
 workspace 'MovieApp'

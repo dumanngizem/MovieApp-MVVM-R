@@ -2,6 +2,20 @@ PODS:
   - Alamofire (5.6.2)
   - IQKeyboardManagerSwift (6.5.10)
   - Kingfisher (6.3.1)
+  - netfox (1.21.0)
+  - OHHTTPStubs/Core (9.1.0)
+  - OHHTTPStubs/Default (9.1.0):
+    - OHHTTPStubs/Core
+    - OHHTTPStubs/JSON
+    - OHHTTPStubs/NSURLSession
+    - OHHTTPStubs/OHPathHelpers
+  - OHHTTPStubs/JSON (9.1.0):
+    - OHHTTPStubs/Core
+  - OHHTTPStubs/NSURLSession (9.1.0):
+    - OHHTTPStubs/Core
+  - OHHTTPStubs/OHPathHelpers (9.1.0)
+  - OHHTTPStubs/Swift (9.1.0):
+    - OHHTTPStubs/Default
   - SwiftEntryKit (2.0.0)
   - SwiftGen (6.5.1)
   - SwiftLint (0.49.0)
@@ -11,6 +25,8 @@ DEPENDENCIES:
   - Alamofire (~> 5.4)
   - IQKeyboardManagerSwift
   - Kingfisher (from `https://github.com/onevcat/Kingfisher`, branch `version6-xcode13`)
+  - netfox
+  - OHHTTPStubs/Swift
   - SwiftEntryKit (= 2.0.0)
   - SwiftGen (~> 6.5.1)
   - SwiftLint (~> 0.43)
@@ -20,6 +36,8 @@ SPEC REPOS:
   trunk:
     - Alamofire
     - IQKeyboardManagerSwift
+    - netfox
+    - OHHTTPStubs
     - SwiftEntryKit
     - SwiftGen
     - SwiftLint
@@ -39,11 +57,13 @@ SPEC CHECKSUMS:
   Alamofire: d368e1ff8a298e6dde360e35a3e68e6c610e7204
   IQKeyboardManagerSwift: 52962c76ab33532f15ad9f3ff4e5715eda5335bb
   Kingfisher: 8b783c3d7be73a99b2172a743a5bc0a4dd331d79
+  netfox: 9d5cc727fe7576c4c7688a2504618a156b7d44b7
+  OHHTTPStubs: 90eac6d8f2c18317baeca36698523dc67c513831
   SwiftEntryKit: 61b5fa36f34a97dd8013e48a7345bc4c4720be9a
   SwiftGen: a6d22010845f08fe18fbdf3a07a8e380fd22e0ea
   SwiftLint: 414d099c0f305c6c73e56139efb468666e535ece
   TinyConstraints: 7b7ccc0c485bb3bb47082138ff28bc33cd49897f
 
-PODFILE CHECKSUM: 92cc9988231cd8d311e8e2c60e4583cd2f50fa2d
+PODFILE CHECKSUM: 8b1a19bd1af13e9298452f1d2b3a99e62705e553
 
 COCOAPODS: 1.11.3
