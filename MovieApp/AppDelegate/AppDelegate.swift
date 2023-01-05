@@ -7,6 +7,7 @@
 
 import UIKit
 import netfox
+import FlipperKit
 
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -17,7 +18,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     var window: UIWindow?
     
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
+        // MARK: - UserDefaults
+        UserDefaults.standard.set(true, forKey: "user_login")
         NFX.sharedInstance().start()
+        setupFlipperKit(application)
         let bounds = UIScreen.main.bounds
         self.window = UIWindow(frame: bounds)
         self.window?.makeKeyAndVisible()
@@ -29,3 +33,16 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     
 }
 
+extension AppDelegate {
+    private func setupFlipperKit(_ application: UIApplication) {
+        let client = FlipperClient.shared()
+        // MARK: - Network
+        client?.add(FlipperKitNetworkPlugin(networkAdapter: SKIOSNetworkAdapter()))
+        // MARK: - Shared Preferences
+        client?.add(FKUserDefaultsPlugin.init(suiteName: "user_login"))
+        let layoutDescriptorMapper = SKDescriptorMapper(defaults: ())
+        FlipperKitLayoutComponentKitSupport.setUpWith(layoutDescriptorMapper)
+        client?.add(FlipperKitLayoutPlugin(rootNode: application, with: layoutDescriptorMapper!))
+        client?.start()
+    }
+}

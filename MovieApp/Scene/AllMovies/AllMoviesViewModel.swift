@@ -67,7 +67,7 @@ extension AllMoviesViewModel {
             case .success(let response):
                 self.configureCellItems(items: response.search)
                 self.reloadData?()
-            case .failure(let _):
+            case .failure( _):
                 print("error")
             }
         })
